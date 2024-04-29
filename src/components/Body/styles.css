@@ -1,0 +1,21 @@
+.contentContainer {
+    margin-top: 30px;
+    width: 90%;
+    height: 70vh;
+    border: 1px solid #000;
+    gap: 10px;
+  
+    display: flex;
+    flex-direction: row;
+  }
+
+  .pokedexContainer li {
+    list-style: none;
+  }
+
+  .pokedexContainer {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border: 1px solid #000
+  }
