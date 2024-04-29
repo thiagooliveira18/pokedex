@@ -1,3 +1,8 @@
+:root {
+  --bg-primary: #EE1B24;
+  --bg-secundary: #C81B24;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
