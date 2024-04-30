@@ -1,0 +1,30 @@
+.cardPokemon {
+    width: 8rem;
+    height: 10rem;
+    padding: 10px;
+
+    border: 2px solid #c2c2c2;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.4);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imgPokemon {
+    width: 6rem;
+    height: 6rem;
+}
+
+.imgPokemonBG {
+    z-index: -1;
+    width: 3rem;
+    height: 3rem;
+}
+
+.namePokemon {
+    color: #FFF;
+    font-weight: bold;
+}

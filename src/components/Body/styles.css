@@ -1,21 +1,30 @@
 .contentContainer {
-    margin-top: 30px;
-    width: 90%;
-    height: 70vh;
-    border: 1px solid #000;
-    gap: 10px;
-  
-    display: flex;
-    flex-direction: row;
-  }
+  margin-top: 30px;
+  width: 90%;
+  height: 70vh;
+  border: 1px solid #000;
+  gap: 10px;
 
-  .pokedexContainer li {
-    list-style: none;
-  }
+  display: flex;
+  flex-direction: row;
+}
 
-  .pokedexContainer {
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    border: 1px solid #000
-  }
+.pokedexContainer li {
+  list-style: none;
+}
+
+.pokedexContainer {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+
+  border: 3px solid #c3c3c3;
+  border-radius: 20px;
+
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
