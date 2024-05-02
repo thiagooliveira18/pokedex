@@ -22,7 +22,7 @@ export default function Body() {
             <div className='pokedexContainer'>                
                 {
                     data.map((pokemon: any) => 
-                        <Pokemon key={pokemon.name} name={pokemon.name} url={pokemon.url} />
+                        <Pokemon key={pokemon.name} url={pokemon.url} />
                     )
                 }
             </div>

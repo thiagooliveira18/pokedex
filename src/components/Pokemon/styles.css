@@ -2,6 +2,10 @@
     width: 8rem;
     height: 10rem;
     padding: 10px;
+    user-select: none;
+
+    position: relative;
+    overflow: hidden;
 
     border: 2px solid #c2c2c2;
     border-radius: 20px;
@@ -11,6 +15,72 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.cardPokemon:active {
+    animation-name: flipCard;
+    -webkit-animation-name: flipCard;
+    -moz-animation-name: flipCard;
+    animation-duration: 1.3s;
+    -webkit-animation-duration: 1.3s;
+    -moz-animation-duration: 1.3s;
+    animation-direction: alternate;
+    -webkit-animation-direction: alternate;
+    -moz-animation-direction: alternate;
+    animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+}
+
+@keyframes flipCard {
+    0%      { width: 8rem; }
+    15%     { width: 6.5rem; }
+    30%     { width: 4rem; }
+    45%     { width: 2.5rem;}
+    50%     { width: 0px; }
+    60%     { width: 2.5rem; }
+    75%     { width: 4rem; }
+    90%     { width: 6.5rem; }
+    100%     { width: 8rem; }
+}
+
+.cardPokemonBack {
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cardPokemonBack h3 {
+    font-size: .9rem;
+}
+
+.cardPokemonBack p {
+    font-size: .8rem;
+}
+
+.detailsContainer {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.typePokemon {
+    font-size: .8rem;
+    width: 5rem;
+    height: 1.2rem;
+    border: 1px solid #000;
+    margin: 2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .imgPokemon {
@@ -26,5 +96,7 @@
 
 .namePokemon {
     color: #FFF;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     font-weight: bold;
+    font-size: 1.1rem;
 }
