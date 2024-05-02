@@ -44,8 +44,6 @@ export default function Pokemon({ url } : any) {
         });
     }, [url]);
 
-    console.log(pokemonData);
-
     const typesKey = Object.keys(typeColor);
     const verifyType = typesKey.filter((color) => color === type.name).toString();
 

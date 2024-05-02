@@ -1,7 +1,7 @@
 .contentContainer {
   margin-top: 30px;
   width: 90%;
-  height: 70vh;
+  height: 75vh;
   border: 1px solid #000;
   gap: 10px;
 
@@ -23,9 +23,39 @@
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 4fr 4fr 1fr;
+  grid-template-areas: 'card1 card2 card3 card4 card5'
+                       'card6 card7 card8 card9 card10'
+                       '. left . right .';
   gap: 20px;
   align-items: center;
   justify-items: center;
+}
+
+.arrow {
+  width: 2.8rem;
+  height: 2.5rem;
+  background-color: var(--bg-primary);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--bg-3th);
+  cursor: pointer;
+
+  border: 3px solid #000;
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arrow:hover {
+  background-color: var(--bg-secundary);
+}
+.left-arrow {
+  grid-area: left;
+}
+
+.right-arrow {
+  grid-area: right;
 }
 
