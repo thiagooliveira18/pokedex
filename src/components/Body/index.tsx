@@ -3,15 +3,20 @@ import Image from 'next/image';
 import './styles.css';
 import SearchContainer from '../SearchContainer';
 import { useEffect, useState } from 'react';
-import Pokemon from '../Pokemon';
+import CardPokemon from '../CardPokemon';
 
 import leftArrow from '../../../public/arrow-left.svg';
 import rightArrow from '../../../public/arrow-right.svg'
 
+interface Pokemon {
+    name: string,
+    url: string
+}
+
 const LIMIT = 10;
 
 export default function Body() {
-    const [data, setData] = useState<any>([]);
+    const [data, setData] = useState<Array<Pokemon>>();
     const [offset, setOffset] = useState<number>(0);
 
     useEffect(() => {
@@ -20,15 +25,16 @@ export default function Body() {
         .then(res => {
             setData(res.results);
         })
-    },[offset]);    
+    },[offset]);
+    console.log(data);
 
     return (
         <div className='contentContainer'>
             <SearchContainer />
             <div className='pokedexContainer'>                
                 {
-                    data.map((pokemon: any) => 
-                        <Pokemon key={pokemon.name} url={pokemon.url} />
+                    data?.map((pokemon: Pokemon) => 
+                        <CardPokemon key={pokemon.name} url={pokemon.url} />
                     )
                 }
                 <div

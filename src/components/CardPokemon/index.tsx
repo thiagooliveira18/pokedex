@@ -7,11 +7,16 @@ import BGPokemonImage from '../../../public/pokebola_02.png';
 import typeColor from '@/mocks/typeColor';
 import PokemonDetails from '../PokemonDetails';
 
-export default function Pokemon({ url } : any) {
+interface TypePrimary {
+    name: string,
+    url: string
+}
+
+export default function CardPokemon({ url } : any) {
     const [pokemonData, setPokemonData] = useState<any>({});
-    const [image, setImage] = useState<any>('');
-    const [type, setType] = useState<any>({});
-    const [types, setTypes] = useState<any>();
+    const [image, setImage] = useState<string>('');
+    const [type, setType] = useState<TypePrimary>();
+    const [types, setTypes] = useState<Array<TypePrimary>>();
     const [modal, setModal] = useState<boolean>(false);
 
     useEffect(() => {
@@ -25,8 +30,10 @@ export default function Pokemon({ url } : any) {
         });
     }, [url]);
 
+    //console.log(pokemonData);
+
     const typesKey = Object.keys(typeColor);
-    const verifyType = typesKey.filter((color) => color === type.name).toString();
+    const verifyType = typesKey.filter((color) => color === type?.name).toString();
 
     return (
         <div
