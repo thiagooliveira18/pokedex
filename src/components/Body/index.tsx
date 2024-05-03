@@ -7,6 +7,7 @@ import CardPokemon from '../CardPokemon';
 
 import leftArrow from '../../../public/arrow-left.svg';
 import rightArrow from '../../../public/arrow-right.svg'
+import Loading from '../Loading';
 
 interface Pokemon {
     name: string,
@@ -18,20 +19,22 @@ const LIMIT = 10;
 export default function Body() {
     const [data, setData] = useState<Array<Pokemon>>();
     const [offset, setOffset] = useState<number>(0);
+    const [isLoading, setIsLoading] = useState<boolean>(true);
 
     useEffect(() => {
         fetch(`https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=${LIMIT}`)
         .then(res => res.json())
         .then(res => {
             setData(res.results);
+            setIsLoading(false);
         })
     },[offset]);
-    console.log(data);
 
     return (
         <div className='contentContainer'>
             <SearchContainer />
             <div className='pokedexContainer'>                
+                {isLoading && <Loading />}
                 {
                     data?.map((pokemon: Pokemon) => 
                         <CardPokemon key={pokemon.name} url={pokemon.url} />
