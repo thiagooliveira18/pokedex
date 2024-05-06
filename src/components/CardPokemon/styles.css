@@ -1,7 +1,7 @@
 .cardPokemon {
     width: 8rem;
     height: 10rem;
-    padding: 10px;
+    padding: 5px;
     user-select: none;
     cursor: pointer;
 

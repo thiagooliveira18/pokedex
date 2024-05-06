@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import './styles.css';
 import SearchContainer from '../SearchContainer';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import CardPokemon from '../CardPokemon';
 
 import leftArrow from '../../../public/arrow-left.svg';
@@ -18,8 +18,10 @@ const LIMIT = 10;
 
 export default function Body() {
     const [data, setData] = useState<Array<Pokemon>>();
+    const [searchData, setSearchData] = useState<Pokemon>();
     const [offset, setOffset] = useState<number>(0);
     const [isLoading, setIsLoading] = useState<boolean>(true);
+    const [searchText, setSearchText] = useState<string>('');
 
     useEffect(() => {
         fetch(`https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=${LIMIT}`)
@@ -27,19 +29,35 @@ export default function Body() {
         .then(res => {
             setData(res.results);
             setIsLoading(false);
-        })
-    },[offset]);
+        });
+    },[offset, searchText]);
+
+
+    const pokemonSearch = useMemo(() => {
+        return searchText.toLowerCase();
+    }, [searchText]);
 
     return (
         <div className='contentContainer'>
-            <SearchContainer />
+            <SearchContainer
+                onChange={(str: string) => setSearchText(str)}
+                value={searchText}
+            />
             <div className='pokedexContainer'>                
                 {isLoading && <Loading />}
                 {
-                    data?.map((pokemon: Pokemon) => 
-                        <CardPokemon key={pokemon.name} url={pokemon.url} />
+                    !searchText && (
+                        data?.map((pokemon: Pokemon) => 
+                            <CardPokemon key={pokemon.name} name={pokemon.name} />
+                        )
                     )
                 }
+                {
+                    searchText && (
+                        <CardPokemon key={pokemonSearch} name={pokemonSearch} />
+                    )
+                }
+
                 <div
                     className='arrow left-arrow'
                     style={{cursor: offset === 0 ? 'not-allowed' : 'pointer'}}
