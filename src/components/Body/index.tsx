@@ -46,6 +46,7 @@ export default function Body() {
                     onClick={() => {
                         if(offset <= 0 || offset == 1) {
                             setOffset(0);
+                            setIsLoading(true);
                         }
                         if(offset > 0){
                             setOffset(offset-LIMIT);
