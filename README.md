@@ -3,34 +3,108 @@
 </p>
 
 # Pokedex
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=IN%20PROGRESS&color=GREEN&style=for-the-badge)
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=GREEN&style=for-the-badge)
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=COMPLETED&color=GREEN&style=for-the-badge)
 <br />
 <br />
 # PT-BR
-## Motivação
-Este projeto tem como motivação o estudo e a prática em programação.
-## 🧰 Recursos
-Foram utilizados os frameworks React.js e Axios para o desenvolvimento do projeto e foi utilizada a API PokéApi (https://pokeapi.co).
-## 🔨 Funcionalidades
-`Lista de pokémons` Dentro do site é gerado uma lista de pokémons que possui diversas abas com diversos pokémons diferentes.<br />
-`Área de busca` Campo onde pode ser feita buscas por determinados pokémons que o usuário deseja encontrar.<br />
-`Botão para voz` Botão onde habilita o microfone do usuário para falar o pokémon que deseja.<br />
-`Filtro` Botão onde o usuário pode selecionar características específicas de pokémons.<br />
-`Cards` Cada pokémon tem uma carta com seus atributos, que podem ser mostradas assim que o usuário clica em um pokémon.
+
 <br />
+
+## Motivação
+- Este projeto tem como finalidade:
+  - Aperfeiçoamento em lógica de programação;
+  - Aprimoramento em estilização de Web Page;
+  - Enriquecimento no conhecimento de front-end.
+
+## 🧰 Recursos
+- Linguagem:
+  - Typescript;
+- Frameworks utilizadas:
+  - React;
+  - Next; 
+
+### API
+PokéApi (https://pokeapi.co)
+
+<br />
+
+## 🔨 Funcionalidades
+`Lista de pokémons` Uma lista de pokémons que possui diversas abas com diversos pokémons diferentes.<br />
+`Área de busca` Campo onde pode ser feita buscas por meio do nome do determinado pokémon que o usuário deseja encontrar .<br />
+`Cards` Cada pokémon tem uma carta com detalhes de tipo, peso e altura do pokémon, que podem ser mostradas assim que o usuário clica em um pokémon.
+
+<br />
+
+## Inicie o Projeto
+
+Primeiro instale as dependências que estão no package.json:
+
+```bash
+npm install
+```
+
+Inicie o servidor de desenvolvimento:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Abra [http://localhost:3000](http://localhost:3000) Com seu browser para ver o resultado.
+
 <br />
 # EN-US
+
+<br />
+
 ## Motivation
-The purpose of this project is to study and practice programing skills.
+- This project has how finality:
+  - Improvement in programming logic;
+  - Improvement in web page styling;
+  - Front-end improvement.
+
 ## 🧰 Resources
-The frameworks React.js and Axios were used for the development of the project and the API PokéApi (https://pokeapi.co) was used.
+
+- Language:
+  - Typescript;
+- Frameworks:
+  - React;
+  - Next;
+
+### API
+PokéApi (https://pokeapi.co)
+
+<br />
+
 ## 🔨 Funcionalidades
-`Pokémons List` Within the site, a list of pokémons is generated that has several tabs with several different pokémons.<br />
+`Pokémons List` A list of pokémons that has several tabs with several different pokémons.<br />
 `Search Area` Field where searches can be made for certain Pokemon that the user wants to find.<br />
-`Voice Button` Button where you enable the user's microphone to speak the pokémon you want.<br />
-`Filter` Button where the user can select specific characteristics of pokemons.<br />
 `Cards` Each pokémon has a card with its attributes, which can be shown as soon as the user clicks on a pokémon.
 
+## Init Project
 
+First install a dependencies in package.json:
 
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
