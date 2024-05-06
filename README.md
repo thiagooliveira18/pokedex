@@ -17,7 +17,7 @@
   - Aprimoramento em estilização de Web Page;
   - Enriquecimento no conhecimento de front-end.
 
-## 🧰 Recursos
+## 🧰 Tecnologia
 - Linguagem:
   - Typescript;
 - Frameworks utilizadas:
@@ -56,7 +56,7 @@ pnpm dev
 bun dev
 ```
 
-Abra [http://localhost:3000](http://localhost:3000) Com seu browser para ver o resultado.
+Abra [http://localhost:3000](http://localhost:3000) com seu browser para ver o resultado.
 
 <br />
 
@@ -65,12 +65,12 @@ Abra [http://localhost:3000](http://localhost:3000) Com seu browser para ver o r
 <br />
 
 ## Motivation
-- This project has how finality:
+- This project was created with the following purposes:
   - Improvement in programming logic;
   - Improvement in web page styling;
   - Front-end improvement.
 
-## 🧰 Resources
+## 🧰 Technology
 
 - Language:
   - Typescript;
@@ -83,14 +83,14 @@ PokéApi (https://pokeapi.co)
 
 <br />
 
-## 🔨 Funcionalidades
+## 🔨 Features
 `Pokémons List` A list of pokémons that has several tabs with several different pokémons.<br />
-`Search Area` Field where searches can be made for certain Pokemon that the user wants to find.<br />
-`Cards` Each pokémon has a card with its attributes, which can be shown as soon as the user clicks on a pokémon.
+`Search Area` Field where the user can search for a specific Pokemon that he wants to find.<br />
+`Cards` Each pokémon has a card with his attributes, which can be shown as soon as the user clicks on a pokémon.
 
-## Init Project
+## Initialize the project
 
-First install a dependencies in package.json:
+First install the dependencies in package.json:
 
 ```bash
 npm install
